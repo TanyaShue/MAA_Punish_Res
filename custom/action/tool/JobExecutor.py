@@ -27,8 +27,8 @@ if project_root:
     from custom.action.tool import ActionStatusEnum, GameActionEnum
     from custom.action.tool.Logger import Logger
 else:
-    from assets.custom.action.tool import ActionStatusEnum, GameActionEnum
-    from assets.custom.action.tool.Logger import Logger
+    from custom.action.tool import ActionStatusEnum, GameActionEnum
+    from custom.action.tool.Logger import Logger
 
 
 

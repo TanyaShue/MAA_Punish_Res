@@ -1,5 +1,4 @@
 import sys
-import time
 from pathlib import Path
 
 from maa.context import Context
@@ -26,7 +25,7 @@ if project_root:
 
     from custom.action.tool.LoadSetting import ROLE_ACTIONS
 else:
-    from assets.custom.action.tool.LoadSetting import ROLE_ACTIONS
+    from custom.action.tool.LoadSetting import ROLE_ACTIONS
 
 
 

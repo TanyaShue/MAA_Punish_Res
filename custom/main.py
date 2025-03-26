@@ -6,7 +6,7 @@ from agent_file import *
 
 
 def main():
-    Toolkit.init_option("./")
+    Toolkit.init_option("/")
     if len(sys.argv) > 1:
         print("使用自定义socket_id: " + sys.argv[-1])
         socket_id = sys.argv[-1]

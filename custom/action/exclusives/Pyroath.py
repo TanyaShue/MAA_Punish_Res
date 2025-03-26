@@ -26,10 +26,10 @@ if project_root:
     from custom.action.tool.Enum import GameActionEnum
     from custom.action.tool.LoadSetting import ROLE_ACTIONS
 else:
-    from assets.custom.action.basics import CombatActions
-    from assets.custom.action.tool import JobExecutor
-    from assets.custom.action.tool.Enum import GameActionEnum
-    from assets.custom.action.tool.LoadSetting import ROLE_ACTIONS
+    from custom.action.basics import CombatActions
+    from custom.action.tool import JobExecutor
+    from custom.action.tool.Enum import GameActionEnum
+    from custom.action.tool.LoadSetting import ROLE_ACTIONS
 
 from maa.context import Context
 from maa.custom_action import CustomAction
