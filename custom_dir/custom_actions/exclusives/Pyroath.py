@@ -21,15 +21,15 @@ if project_root:
     print(f"项目根目录: {project_root}")
     # 添加项目根目录到sys.path
     sys.path.append(str(project_root))
-    from custom.action.basics import CombatActions
-    from custom.action.tool import JobExecutor
-    from custom.action.tool.Enum import GameActionEnum
-    from custom.action.tool.LoadSetting import ROLE_ACTIONS
+    from custom_dir.custom_actions.basics import CombatActions
+    from custom_dir.custom_actions.tool import JobExecutor
+    from custom_dir.custom_actions.tool.Enum import GameActionEnum
+    from custom_dir.custom_actions.tool.LoadSetting import ROLE_ACTIONS
 else:
-    from custom.action.basics import CombatActions
-    from custom.action.tool import JobExecutor
-    from custom.action.tool.Enum import GameActionEnum
-    from custom.action.tool.LoadSetting import ROLE_ACTIONS
+    from custom_dir.custom_actions.basics import CombatActions
+    from custom_dir.custom_actions.tool import JobExecutor
+    from custom_dir.custom_actions.tool.Enum import GameActionEnum
+    from custom_dir.custom_actions.tool.LoadSetting import ROLE_ACTIONS
 
 from maa.context import Context
 from maa.custom_action import CustomAction

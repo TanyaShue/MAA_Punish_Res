@@ -21,7 +21,7 @@ class ResetIdentify(CustomAction):
                     "进入物归新主_矩阵循生": {"enabled": True},
                     "选择首发2_矩阵循生": {"enabled": True},
                     "矩阵循生": {
-                        "action": "custom",
+                        "custom_actions": "custom_dir",
                         "custom_action": "ResetIdentify",
                         "custom_action_param": {"mode": "矩阵循生"},
                     },

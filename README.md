@@ -170,7 +170,7 @@ Tasks:
 
 <这里会列出你已经增加，等待执行的任务>
 
-### Select action ###
+### Select custom_actions ###
 
         1. Switch controller
         2. Switch resource

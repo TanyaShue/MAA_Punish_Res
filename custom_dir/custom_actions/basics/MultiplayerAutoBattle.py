@@ -23,9 +23,9 @@ if project_root:
     # 添加项目根目录到sys.path
     sys.path.append(str(project_root))
 
-    from custom.action.tool.LoadSetting import ROLE_ACTIONS
+    from custom_dir.custom_actions.tool.LoadSetting import ROLE_ACTIONS
 else:
-    from custom.action.tool.LoadSetting import ROLE_ACTIONS
+    from custom_dir.custom_actions.tool.LoadSetting import ROLE_ACTIONS
 
 
 
@@ -39,7 +39,7 @@ class MultiplayerAutoBattle(CustomAction):
             for role_name, action in ROLE_ACTIONS.items():
                 result = context.run_recognition(f"检查{role_name}", image)
                 if result is not None:
-                    recognized_role = {"action": "Custom", "custom_action": action}
+                    recognized_role = {"custom_actions": "Custom", "custom_action": action}
                     break
 
             if recognized_role:

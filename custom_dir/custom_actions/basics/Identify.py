@@ -11,7 +11,7 @@ class Identify(CustomAction):
             context.override_pipeline(
                 {
                     "识别人物": {"enabled": False},
-                    "战斗中": {"action": "Custom", "custom_action": "Oblivion"},
+                    "战斗中": {"custom_actions": "Custom", "custom_action": "Oblivion"},
                 }
             )
             print("终焉战斗")
@@ -19,7 +19,7 @@ class Identify(CustomAction):
             context.override_pipeline(
                 {
                     "识别人物": {"enabled": False},
-                    "战斗中": {"action": "Custom", "custom_action": "Stigmata"},
+                    "战斗中": {"custom_actions": "Custom", "custom_action": "Stigmata"},
                 }
             )
             print("深痕战斗")
@@ -27,7 +27,7 @@ class Identify(CustomAction):
             context.override_pipeline(
                 {
                     "识别人物": {"enabled": False},
-                    "战斗中": {"action": "Custom", "custom_action": "LostLullaby"},
+                    "战斗中": {"custom_actions": "Custom", "custom_action": "LostLullaby"},
                 }
             )
             print("深谣战斗")
@@ -35,7 +35,7 @@ class Identify(CustomAction):
             context.override_pipeline(
                 {
                     "识别人物": {"enabled": False},
-                    "战斗中": {"action": "Custom", "custom_action": "CrimsonWeave"},
+                    "战斗中": {"custom_actions": "Custom", "custom_action": "CrimsonWeave"},
                 }
             )
             print("深红囚影")
@@ -43,7 +43,7 @@ class Identify(CustomAction):
             context.override_pipeline(
                 {
                     "识别人物": {"enabled": False},
-                    "战斗中": {"action": "Custom", "custom_action": "Pyroath"},
+                    "战斗中": {"custom_actions": "Custom", "custom_action": "Pyroath"},
                 }
             )
             print("誓焰战斗")
@@ -51,7 +51,7 @@ class Identify(CustomAction):
             context.override_pipeline(
                 {
                     "识别人物": {"enabled": False},
-                    "战斗中": {"action": "Custom", "custom_action": "CombatActions"},
+                    "战斗中": {"custom_actions": "Custom", "custom_action": "CombatActions"},
                 }
             )
             print("未知战斗")

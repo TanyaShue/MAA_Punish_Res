@@ -166,7 +166,7 @@ class SelectCharacter(CustomAction):
             {
                 "作战开始": {
                     "post_delay": 500,
-                    "action": "DoNothing",
+                    "custom_actions": "DoNothing",
                     "next": "自动战斗任务",
                 }
             },

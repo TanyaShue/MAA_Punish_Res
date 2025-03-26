@@ -25,9 +25,9 @@ if project_root:
     # 添加项目根目录到sys.path
     sys.path.append(str(project_root))
 
-    from custom.action.tool.LoadSetting import ROLE_ACTIONS
+    from custom_dir.custom_actions.tool.LoadSetting import ROLE_ACTIONS
 else:
-    from custom.action.tool.LoadSetting import ROLE_ACTIONS
+    from custom_dir.custom_actions.tool.LoadSetting import ROLE_ACTIONS
 
 
 
@@ -92,7 +92,7 @@ class IdentifyRoles(CustomAction):
                 # 覆写战斗流程
                 context.override_pipeline(
                     {
-                        "角色特有战斗": {"action": "Custom", "custom_action": action},
+                        "角色特有战斗": {"custom_actions": "Custom", "custom_action": action},
                         "自动战斗开始": {"next": ["单人自动战斗循环"]},
                     }
                 )

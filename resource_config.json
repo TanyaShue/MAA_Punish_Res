@@ -1,0 +1,410 @@
+{
+    "resource_name": "MPA",
+    "resource_version": "1.0.0",
+    "resource_author": "overflow65537",
+    "resource_update_service": "https://github.com/overflow65537/MAA_Punish/releases/latest",
+    "resource_description": "MPA automation script for MAA_Punish",
+    "resource_icon": "/icons/apps_icons/MPA.png",
+    "resource_tasks": [
+        {
+            "task_name": "进入游戏",
+            "task_entry": "启动",
+            "option": []
+        },
+        {
+            "task_name": "指挥局",
+            "task_entry": "指挥局",
+            "option": []
+        },
+        {
+            "task_name": "拟真围剿",
+            "task_entry": "拟真围剿",
+            "option": []
+        },
+        {
+            "task_name": "纷争战区",
+            "task_entry": "纷争战区",
+            "option": []
+        },
+        {
+            "task_name": "诺曼复兴战",
+            "task_entry": "诺曼复兴战",
+            "option": []
+        },
+        {
+            "task_name": "幻痛囚笼",
+            "task_entry": "幻痛囚笼",
+            "option": []
+        },
+        {
+            "task_name": "刷A级碎片",
+            "task_entry": "刷A级碎片",
+            "option": [
+                "选择A级角色",
+                "是否使用体力"
+            ]
+        },
+        {
+            "task_name": "领取体力",
+            "task_entry": "领取体力",
+            "option": []
+        },
+        {
+            "task_name": "领取邮件",
+            "task_entry": "邮件",
+            "option": []
+        },
+        {
+            "task_name": "购买碎片",
+            "task_entry": "购买碎片",
+            "option": []
+        },
+        {
+            "task_name": "宿舍委托",
+            "task_entry": "宿舍委托",
+            "option": []
+        },
+        {
+            "task_name": "宿舍任务",
+            "task_entry": "宿舍任务",
+            "option": []
+        },
+        {
+            "task_name": "拟战场域",
+            "task_entry": "拟战场域",
+            "option": [
+                "使用临期体力"
+            ]
+        },
+        {
+            "task_name": "守护者行动",
+            "task_entry": "维系者行动",
+            "option": []
+        },
+        {
+            "task_name": "领取任务",
+            "task_entry": "任务",
+            "option": []
+        },
+        {
+            "task_name": "战令",
+            "task_entry": "通行证",
+            "option": []
+        },
+        {
+            "task_name": "结束游戏",
+            "task_entry": "停止",
+            "option": []
+        },
+        {
+            "task_name": "矩阵循生",
+            "task_entry": "矩阵循生",
+            "option": [
+                "选择模式",
+                "使用人物"
+            ]
+        },
+        {
+            "task_name": "寒境曙光",
+            "task_entry": "寒境曙光",
+            "option": [
+                "选择温度",
+                "选择效果"
+            ]
+        }
+    ],
+    "options": [
+        {
+            "name": "选择A级角色",
+            "type": "select",
+            "default": "破晓",
+            "pipeline_override": {
+                "A级角色": {
+                    "expected": "{value}"
+                }
+            },
+            "choices": [
+                {
+                    "name": "破晓",
+                    "value": "破晓"
+                },
+                {
+                    "name": "徊闪",
+                    "value": "徊闪"
+                },
+                {
+                    "name": "耀炎",
+                    "value": "耀炎"
+                },
+                {
+                    "name": "觅语",
+                    "value": "觅语"
+                },
+                {
+                    "name": "擎驱",
+                    "value": "擎驱"
+                },
+                {
+                    "name": "清商",
+                    "value": "清商"
+                },
+                {
+                    "name": "琉璃",
+                    "value": "琉璃"
+                },
+                {
+                    "name": "XXI",
+                    "value": "XXI"
+                },
+                {
+                    "name": "明觉",
+                    "value": "明觉"
+                },
+                {
+                    "name": "游麟",
+                    "value": "游麟"
+                },
+                {
+                    "name": "瑰丽",
+                    "value": "瑰丽"
+                },
+                {
+                    "name": "弧光",
+                    "value": "弧光"
+                },
+                {
+                    "name": "银牙",
+                    "value": "银牙"
+                },
+                {
+                    "name": "溢彩",
+                    "value": "溢彩"
+                },
+                {
+                    "name": "重能",
+                    "value": "重能"
+                },
+                {
+                    "name": "零度",
+                    "value": "零度"
+                },
+                {
+                    "name": "流光",
+                    "value": "流光"
+                },
+                {
+                    "name": "夙星",
+                    "value": "夙星"
+                },
+                {
+                    "name": "夜刃",
+                    "value": "夜刃"
+                },
+                {
+                    "name": "爆裂",
+                    "value": "爆裂"
+                },
+                {
+                    "name": "异火",
+                    "value": "异火"
+                },
+                {
+                    "name": "风暴",
+                    "value": "风暴"
+                },
+                {
+                    "name": "蚀暗",
+                    "value": "蚀暗"
+                },
+                {
+                    "name": "黎明",
+                    "value": "黎明"
+                },
+                {
+                    "name": "红莲",
+                    "value": "红莲"
+                }
+            ]
+        },
+        {
+            "name": "是否使用体力",
+            "type": "boole",
+            "default": true,
+            "pipeline_override": {
+                "A_不使用体力": {
+                    "enabled": false
+                },
+                "A_使用体力": {
+                    "enabled": true
+                }
+            },
+            "choices": [
+                {
+                    "name": "是",
+                    "value": true
+                },
+                {
+                    "name": "否",
+                    "value": false
+                }
+            ]
+        },
+        {
+            "name": "使用临期体力",
+            "type": "boole",
+            "default": true,
+            "pipeline_override": {
+                "结束战斗任务_不使用体力": {
+                    "enabled": false
+                },
+                "补给包不足_拟战场域": {
+                    "enabled": true
+                },
+                "暂无血清组可使用": {
+                    "enabled": true
+                },
+                "使用体力界面": {
+                    "enabled": true
+                },
+                "吃体力药": {
+                    "enabled": true
+                }
+            },
+            "choices": [
+                {
+                    "name": "是",
+                    "value": true
+                },
+                {
+                    "name": "否",
+                    "value": false
+                }
+            ]
+        },
+        {
+            "name": "选择模式",
+            "type": "select",
+            "default": "普通模式",
+            "pipeline_override": {
+                "选择难度_矩阵循生": {
+                    "expected": "{value}"
+                }
+            },
+            "choices": [
+                {
+                    "name": "普通模式",
+                    "value": "普通"
+                },
+                {
+                    "name": "困难模式",
+                    "value": "困难"
+                },
+                {
+                    "name": "噩梦模式",
+                    "value": "噩梦"
+                }
+            ]
+        },
+        {
+            "name": "使用人物",
+            "type": "select",
+            "default": "誓焰",
+            "pipeline_override": {
+                "选择自动作战人物_矩阵循生": {
+                    "threshold": [0.9, 0.9, 0.9],
+                    "template": [
+                        "肉鸽通用\\誓焰终解_矩阵.png",
+                        "肉鸽通用\\誓焰_矩阵.png",
+                        "肉鸽通用\\誓焰花嫁_矩阵.png"
+                    ]
+                }
+            },
+            "choices": [
+                {
+                    "name": "誓焰",
+                    "value": "誓焰"
+                },
+                {
+                    "name": "深红囚影",
+                    "value": "深红囚影"
+                },
+                {
+                    "name": "深谣",
+                    "value": "深谣"
+                },
+                {
+                    "name": "终焉",
+                    "value": "终焉"
+                },
+                {
+                    "name": "深痕",
+                    "value": "深痕"
+                }
+            ]
+        },
+        {
+            "name": "选择温度",
+            "type": "select",
+            "default": "严霜",
+            "pipeline_override": {
+                "选择具体难度_寒境曙光": {
+                    "expected": "{value}"
+                }
+            },
+            "choices": [
+                {
+                    "name": "常温",
+                    "value": "^常温$"
+                },
+                {
+                    "name": "初冷",
+                    "value": "^初冷$"
+                },
+                {
+                    "name": "微寒",
+                    "value": "^微寒$"
+                },
+                {
+                    "name": "冰冽",
+                    "value": "^冰冽$"
+                },
+                {
+                    "name": "严霜",
+                    "value": "^严霜$"
+                },
+                {
+                    "name": "极寒",
+                    "value": "^极寒$"
+                }
+            ]
+        },
+        {
+            "name": "选择效果",
+            "type": "select",
+            "default": "启动资金",
+            "pipeline_override": {
+                "选择具体开局_寒境曙光": {
+                    "expected": "{value}"
+                }
+            },
+            "choices": [
+                {
+                    "name": "军事",
+                    "value": "^军事$"
+                },
+                {
+                    "name": "基建",
+                    "value": "^基建$"
+                },
+                {
+                    "name": "经济",
+                    "value": "^经济$"
+                },
+                {
+                    "name": "启动资金",
+                    "value": "^启动资金$"
+                }
+            ]
+        }
+    ]
+}
