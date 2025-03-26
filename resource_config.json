@@ -1,6 +1,6 @@
 {
     "resource_name": "MPA",
-    "resource_version": "1.0.1",
+    "resource_version": "1.0.0",
     "resource_author": "overflow65537",
     "resource_update_service": "https://github.com/overflow65537/MAA_Punish/releases/latest",
     "resource_description": "MPA automation script for MAA_Punish",
@@ -237,17 +237,7 @@
                 "A_使用体力": {
                     "enabled": true
                 }
-            },
-            "choices": [
-                {
-                    "name": "是",
-                    "value": true
-                },
-                {
-                    "name": "否",
-                    "value": false
-                }
-            ]
+            }
         },
         {
             "name": "使用临期体力",
@@ -255,31 +245,21 @@
             "default": true,
             "pipeline_override": {
                 "结束战斗任务_不使用体力": {
-                    "enabled": false
+                    "enabled": "{boole}"
                 },
                 "补给包不足_拟战场域": {
-                    "enabled": true
+                    "enabled": "{boole}"
                 },
                 "暂无血清组可使用": {
-                    "enabled": true
+                    "enabled": "{boole}"
                 },
                 "使用体力界面": {
-                    "enabled": true
+                    "enabled": "{boole}"
                 },
                 "吃体力药": {
-                    "enabled": true
+                    "enabled": "{boole}"
                 }
-            },
-            "choices": [
-                {
-                    "name": "是",
-                    "value": true
-                },
-                {
-                    "name": "否",
-                    "value": false
-                }
-            ]
+            }
         },
         {
             "name": "选择模式",
@@ -311,7 +291,11 @@
             "default": "誓焰",
             "pipeline_override": {
                 "选择自动作战人物_矩阵循生": {
-                    "threshold": [0.9, 0.9, 0.9],
+                    "threshold": [
+                        0.9,
+                        0.9,
+                        0.9
+                    ],
                     "template": [
                         "肉鸽通用\\誓焰终解_矩阵.png",
                         "肉鸽通用\\誓焰_矩阵.png",
