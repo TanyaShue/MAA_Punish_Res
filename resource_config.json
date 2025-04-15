@@ -2,7 +2,8 @@
     "resource_name": "MPA",
     "resource_version": "1.0.0",
     "resource_author": "overflow65537",
-    "resource_update_service": "https://github.com/overflow65537/MAA_Punish/releases/latest",
+    "resource_update_service_id": "MAA_Punish",
+    "resource_rep_url": "",
     "resource_description": "MPA automation script for MAA_Punish",
     "resource_icon": "/icons/apps_icons/MPA.png",
     "resource_tasks": [
