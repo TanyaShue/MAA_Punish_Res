@@ -6,6 +6,8 @@
     "resource_rep_url": "",
     "resource_description": "MPA automation script for MAA_Punish",
     "resource_icon": "/icons/apps_icons/MPA.png",
+    "custom_path": "",
+    "custom_prams": "",
     "resource_tasks": [
         {
             "task_name": "进入游戏",
