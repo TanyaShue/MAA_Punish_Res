@@ -8,6 +8,7 @@
     "resource_icon": "/icons/apps_icons/MPA.png",
     "custom_path": "",
     "custom_prams": "",
+    "custom_dir": "",
     "resource_tasks": [
         {
             "task_name": "进入游戏",
