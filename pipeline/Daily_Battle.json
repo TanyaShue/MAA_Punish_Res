@@ -59,6 +59,8 @@
         "action": "Click"
     },
     "自动作战程序": {
+        "post_delay": 0,
+        "pre_delay": 0,
         "recognition": "TemplateMatch",
         "roi": [
             1013,
@@ -66,7 +68,7 @@
             200,
             200
         ],
-        "template": "战斗\\闪避.png",
+        "template": "战斗/闪避.png",
         "action": "Custom",
         "custom_action": "CombatActions"
     },
@@ -110,7 +112,21 @@
             31
         ],
         "template": "战斗/吃体力药_993_21_30_30__943_0_130_130.png",
-        "action": "Click"
+        "action": "Click",
+        "next": [
+            "使用体力界面_reco",
+            "吃体力药"
+        ]
+    },
+    "使用体力界面_reco": {
+        "recognition": "OCR",
+        "roi": [
+            847,
+            270,
+            185,
+            57
+        ],
+        "expected": "注射血清"
     },
     "打开战斗": {
         "post_delay": 1500,
@@ -125,6 +141,7 @@
         "action": "Click"
     },
     "意外点击_限定活动": {
+        "post_delay": 3000,
         "recognition": "OCR",
         "roi": [
             47,
@@ -133,8 +150,12 @@
             42
         ],
         "expected": "限定开放",
-        "next": [
-            "返回"
+        "action": "Click",
+        "target": [
+            78,
+            36,
+            1,
+            1
         ]
     },
     "打开资源": {
@@ -195,6 +216,21 @@
         ]
     },
     "开始自动战斗": {
+        "on_error": "拟战场域",
+        "recognition": "OCR",
+        "roi": [
+            748,
+            640,
+            56,
+            33
+        ],
+        "expected": "最大",
+        "action": "Click",
+        "next": [
+            "点击自动作战"
+        ]
+    },
+    "点击自动作战": {
         "post_delay": 4000,
         "recognition": "OCR",
         "roi": [
@@ -294,36 +330,70 @@
         ]
     },
     "使用体力界面": {
-        "post_delay": 1500,
-        "recognition": "TemplateMatch",
+        "on_error": "使用体力界面_错误",
+        "recognition": "OCR",
         "roi": [
-            193,
-            167,
-            570,
-            71
+            847,
+            270,
+            185,
+            57
         ],
-        "template": "战斗\\取消选择体力药.png",
+        "expected": "注射血清",
+        "next": [
+            "选择临期体力",
+            "没有临期体力"
+        ]
+    },
+    "没有临期体力": {
+        "post_delay": 1000,
+        "recognition": "OCR",
+        "roi": [
+            601,
+            533,
+            266,
+            148
+        ],
+        "expected": "取消",
         "action": "Click",
         "next": [
-            "使用体力界面",
-            "选择临期体力",
-            "退出血清界面_无临期体力"
+            "返回主菜单"
         ]
+    },
+    "使用体力界面_错误": {
+        "action": "Custom",
+        "custom_action": "ScreenShot",
+        "custom_action_param": {
+            "type": "CE"
+        }
     },
     "选择临期体力": {
         "recognition": "OCR",
         "roi": [
-            235,
-            175,
-            485,
-            379
+            252,
+            179,
+            360,
+            37
         ],
         "expected": [
-            "1天",
-            "2天",
-            "3天"
+            "小时",
+            "^1天$",
+            "^2天$",
+            "^3天$"
         ],
+        "action": "Swipe",
+        "next": [
+            "关闭弹窗"
+        ]
+    },
+    "关闭弹窗": {
+        "post_delay": 1000,
         "action": "Click",
+        "target": [
+            100,
+            100,
+            0,
+            0
+        ],
         "next": [
             "确认使用"
         ]

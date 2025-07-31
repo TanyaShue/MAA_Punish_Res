@@ -32,6 +32,9 @@
             "检查主界面2",
             "关闭奖励",
             "返回主菜单"
+        ],
+        "interrupt": [
+            "确定_厄愿潮声"
         ]
     },
     "返回主菜单_图标": {
@@ -94,24 +97,27 @@
             51,
             53
         ],
-        "template": "指挥局\\返回.png",
+        "template": "指挥局/返回.png",
         "action": "Click"
     },
     "返回主菜单_err": {
-        "focus": true,
-        "focus_succeeded": "识别错误，返回主菜单",
-        "focus_succeeded_color": "Tomato",
+        "focus": {
+            "succeeded": "[color:Tomato]识别错误，返回主菜单[/color]"
+        },
         "action": "Custom",
         "custom_action": "ScreenShot",
         "custom_action_param": {
             "type": "ERR"
         },
         "next": [
+            "检查分辨率",
             "检查主界面",
             "返回主菜单",
             "返回主菜单_图标"
         ],
         "interrupt": [
+            "确定_厄愿潮声",
+            "领取藏品_厄愿潮声",
             "关闭奖励",
             "返回",
             "返回_图标"
@@ -121,9 +127,9 @@
         ]
     },
     "重启游戏": {
-        "focus": true,
-        "focus_succeeded": "未知错误,重启游戏",
-        "focus_succeeded_color": "Tomato",
+        "focus": {
+            "succeeded": "[color:Tomato]未知错误,重启游戏[/color]"
+        },
         "action": "StopApp",
         "package": "com.kurogame.haru.hero",
         "next": [
@@ -138,7 +144,7 @@
             124,
             96
         ],
-        "template": "幻痛囚笼\\关闭奖励.png",
+        "template": "幻痛囚笼/关闭奖励.png",
         "action": "Click"
     },
     "跳过剧情": {

@@ -1,11 +1,144 @@
 {
-    "test": {
+    "主线自动战斗": {
+        "timeout": 3000000,
         "next": [
-            "局内招募_寒境曙光"
+            "循环执行器"
         ],
         "interrupt": [
-            "战斗测试"
+            "自动反击",
+            "进入战斗",
+            "进入战斗_条件2",
+            "跳过战斗对话",
+            "战斗重启1",
+            "跳过剧情",
+            "载入中",
+            "主线跳过",
+            "重置识别"
         ]
+    },
+    "自动反击": {
+        "post_delay": 0,
+        "pre_delay": 0,
+        "recognition": "Custom",
+        "custom_recognition": "AutoCounter",
+        "custom_recognition_param": {
+            "current_hp": ""
+        },
+        "action": "Click"
+    },
+    "检查血量": {
+        "recognition": "OCR",
+        "roi": [
+            19,
+            15,
+            141,
+            29
+        ],
+        "expected": [
+            "\\d+\/\\d+"
+        ]
+    },
+    "战斗重启1": {
+        "recognition": "OCR",
+        "roi": [
+            820,
+            266,
+            73,
+            53
+        ],
+        "expected": [
+            "重启"
+        ],
+        "action": "Click"
+    },
+    "对话跳过": {
+        "only_rec": true,
+        "recognition": "OCR",
+        "roi": [
+            787,
+            595,
+            50,
+            32
+        ],
+        "expected": [
+            "跳过"
+        ],
+        "action": "Click"
+    },
+    "进入战斗_条件2": {
+        "post_delay": 0,
+        "pre_delay": 0,
+        "recognition": "OCR",
+        "roi": [
+            14,
+            82,
+            214,
+            67
+        ],
+        "expected": [
+            "^击败.*",
+            "^消灭.*",
+            "^清理.*",
+            "生物",
+            "异合",
+            "消灭",
+            "感染体",
+            "抵御",
+            "清除"
+        ],
+        "next": [
+            "识别人物",
+            "战斗中",
+            "空任务"
+        ]
+    },
+    "进入战斗": {
+        "post_delay": 0,
+        "pre_delay": 0,
+        "recognition": "ColorMatch",
+        "roi": [
+            403,
+            51,
+            472,
+            7
+        ],
+        "upper": [
+            255,
+            255,
+            255
+        ],
+        "lower": [
+            255,
+            255,
+            255
+        ],
+        "connected": true,
+        "next": [
+            "识别人物",
+            "战斗中",
+            "空任务"
+        ]
+    },
+    "重置识别": {
+        "post_delay": 1000,
+        "action": "Custom",
+        "custom_action": "ResetIdentify"
+    },
+    "主线跳过": {
+        "recognition": "OCR",
+        "roi": [
+            1197,
+            124,
+            47,
+            25
+        ],
+        "expected": [
+            "SKIP"
+        ],
+        "action": "Click"
+    },
+    "循环执行器": {
+        "inverse": true
     },
     "识别人物": {
         "green_mask": true,
@@ -16,7 +149,7 @@
             131,
             131
         ],
-        "template": "战斗\\闪避.png",
+        "template": "战斗/闪避.png",
         "action": "Custom",
         "custom_action": "Identify"
     },
@@ -29,7 +162,7 @@
             131,
             131
         ],
-        "template": "战斗\\闪避.png",
+        "template": "战斗/闪避.png",
         "next": [
             "检查比安卡·深痕",
             "检查露西亚·誓焰",
@@ -39,65 +172,39 @@
         ]
     },
     "深痕战斗": {
+        "post_delay": 0,
+        "pre_delay": 0,
         "action": "Custom",
         "custom_action": "Stigmata"
     },
     "深谣战斗": {
+        "post_delay": 0,
+        "pre_delay": 0,
         "action": "Custom",
         "custom_action": "LostLullaby"
     },
     "深红囚影战斗": {
+        "post_delay": 0,
+        "pre_delay": 0,
         "action": "Custom",
         "custom_action": "CrimsonWeave"
     },
     "誓焰战斗": {
+        "post_delay": 0,
+        "pre_delay": 0,
         "action": "Custom",
         "custom_action": "Pyroath"
     },
     "终焉战斗": {
+        "post_delay": 0,
+        "pre_delay": 0,
         "action": "Custom",
         "custom_action": "Oblivion"
     },
-    "识别信号球_黄": {
-        "recognition": "ColorMatch",
-        "roi": [
-            416,
-            457,
-            848,
-            98
-        ],
-        "method": 40,
-        "upper": [
-            30,
-            200,
-            200
-        ],
-        "lower": [
-            5,
-            125,
-            125
-        ],
-        "connected": true,
-        "count": 50
-    },
-    "识别信号球_红": {
-        "recognition": "ColorMatch",
-        "roi": [
-            416,
-            457,
-            848,
-            98
-        ],
-        "upper": [
-            190,
-            75,
-            75
-        ],
-        "lower": [
-            80,
-            40,
-            40
-        ],
-        "connected": true
+    "启明战斗": {
+        "post_delay": 0,
+        "pre_delay": 0,
+        "action": "Custom",
+        "custom_action": "Shukra"
     }
 }

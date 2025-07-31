@@ -36,7 +36,7 @@
             131,
             131
         ],
-        "template": "战斗\\闪避.png"
+        "template": "战斗/闪避.png"
     },
     "识别角色名": {
         "recognition": "OCR",
@@ -54,6 +54,7 @@
             91,
             153
         ],
+        "expected": "",
         "action": "Click"
     },
     "出队长界面": {
@@ -81,14 +82,20 @@
         "expected": "Loading|oadin|adi"
     },
     "角色特有战斗": {
+        "post_delay": 0,
+        "pre_delay": 0,
         "action": "Custom",
         "custom_action": "1"
     },
     "通用战斗模式": {
+        "post_delay": 0,
+        "pre_delay": 0,
         "action": "Custom",
         "custom_action": "CombatActions"
     },
     "自动战斗结束": {
+        "post_delay": 0,
+        "pre_delay": 0,
         "recognition": "OCR",
         "roi": [
             0,
@@ -99,6 +106,8 @@
         "expected": "结束战斗"
     },
     "技能_能量条": {
+        "post_delay": 0,
+        "pre_delay": 0,
         "recognition": "ColorMatch",
         "roi": [
             28,

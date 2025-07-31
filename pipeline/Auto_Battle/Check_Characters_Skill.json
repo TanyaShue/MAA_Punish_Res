@@ -1,0 +1,359 @@
+{
+    "检查残月值_终焉": {
+        "post_delay": 0,
+        "pre_delay": 0,
+        "recognition": "ColorMatch",
+        "roi": [
+            705,
+            631,
+            53,
+            40
+        ],
+        "upper": [
+            209,
+            67,
+            71
+        ],
+        "lower": [
+            155,
+            46,
+            64
+        ],
+        "connected": true
+    },
+    "检查u1_囚影": {
+        "post_delay": 0,
+        "pre_delay": 0,
+        "green_mask": true,
+        "recognition": "TemplateMatch",
+        "template": [
+            "自定义战斗/深红囚影_u1.png"
+        ],
+        "roi": [
+            809,
+            556,
+            159,
+            140
+        ]
+    },
+    "检查无光值_囚影": {
+        "post_delay": 0,
+        "pre_delay": 0,
+        "recognition": "OCR",
+        "expected": "^(300|474|[4-5][0-9][0-9]|600)$",
+        "roi": [
+            473,
+            598,
+            41,
+            27
+        ]
+    },
+    "检查u2_囚影": {
+        "post_delay": 0,
+        "pre_delay": 0,
+        "recognition": "TemplateMatch",
+        "green_mask": true,
+        "template": "自定义战斗/深红囚影_u2.png",
+        "roi": [
+            809,
+            556,
+            159,
+            140
+        ]
+    },
+    "检查短刀_囚影": {
+        "post_delay": 0,
+        "pre_delay": 0,
+        "recognition": "OCR",
+        "expected": "^(0|[1-5][0-9][0-9]|600)$",
+        "roi": [
+            540,
+            598,
+            37,
+            28
+        ]
+    },
+    "检查比安卡·深痕一阶段": {
+        "post_delay": 0,
+        "pre_delay": 0,
+        "recognition": "TemplateMatch",
+        "roi": [
+            1113,
+            556,
+            138,
+            142
+        ],
+        "template": [
+            "自定义战斗/深痕.png"
+        ],
+        "green_mask": true
+    },
+    "检查核心被动_深痕": {
+        "post_delay": 0,
+        "pre_delay": 0,
+        "recognition": "ColorMatch",
+        "roi": [
+            994,
+            569,
+            122,
+            125
+        ],
+        "upper": [
+            169,
+            165,
+            204
+        ],
+        "lower": [
+            68,
+            69,
+            89
+        ]
+    },
+    "检查u2数值_深痕": {
+        "post_delay": 0,
+        "pre_delay": 0,
+        "recognition": "OCR",
+        "roi": [
+            717,
+            601,
+            57,
+            31
+        ],
+        "expected": "^9\\d|[1-9]\\d{2,}$"
+    },
+    "检查u1_深痕": {
+        "post_delay": 0,
+        "pre_delay": 0,
+        "recognition": "TemplateMatch",
+        "green_mask": true,
+        "roi": [
+            857,
+            578,
+            113,
+            112
+        ],
+        "template": "自定义战斗/深痕_u1.png"
+    },
+    "检查u2_深痕": {
+        "post_delay": 0,
+        "pre_delay": 0,
+        "recognition": "TemplateMatch",
+        "green_mask": true,
+        "roi": [
+            857,
+            578,
+            113,
+            112
+        ],
+        "template": "自定义战斗/深痕_u2.png"
+    },
+    "检查阶段_深痕": {
+        "post_delay": 0,
+        "pre_delay": 0,
+        "recognition": "OCR",
+        "roi": [
+            717,
+            601,
+            57,
+            31
+        ],
+        "expected": "^-?\\d+$"
+    },
+    "检查u1_誓焰": {
+        "post_delay": 0,
+        "pre_delay": 0,
+        "green_mask": true,
+        "recognition": "TemplateMatch",
+        "roi": [
+            837,
+            558,
+            163,
+            161
+        ],
+        "template": "自定义战斗/誓焰_u1.png"
+    },
+    "检查u2_誓焰": {
+        "post_delay": 0,
+        "pre_delay": 0,
+        "green_mask": true,
+        "recognition": "TemplateMatch",
+        "roi": [
+            837,
+            558,
+            163,
+            161
+        ],
+        "template": "自定义战斗/誓焰_u2.png"
+    },
+    "检查u2max_誓焰": {
+        "post_delay": 0,
+        "pre_delay": 0,
+        "green_mask": true,
+        "recognition": "TemplateMatch",
+        "roi": [
+            837,
+            558,
+            163,
+            161
+        ],
+        "template": "自定义战斗/誓焰_u2max.png"
+    },
+    "检查u3_誓焰": {
+        "post_delay": 0,
+        "pre_delay": 0,
+        "recognition": "TemplateMatch",
+        "roi": [
+            837,
+            558,
+            163,
+            161
+        ],
+        "threshold": 0.55,
+        "template": "自定义战斗/誓焰_u3.png"
+    },
+    "检查p1动能条_誓焰": {
+        "post_delay": 0,
+        "pre_delay": 0,
+        "recognition": "ColorMatch",
+        "roi": [
+            765,
+            622,
+            15,
+            16
+        ],
+        "upper": [
+            247,
+            243,
+            174
+        ],
+        "lower": [
+            233,
+            224,
+            148
+        ]
+    },
+    "检查阶段p1_深谣": {
+        "post_delay": 0,
+        "pre_delay": 0,
+        "green_mask": true,
+        "recognition": "TemplateMatch",
+        "roi": [
+            1124,
+            563,
+            142,
+            135
+        ],
+        "template": "自定义战斗/深谣_p1.png"
+    },
+    "检查阶段p2_深谣": {
+        "post_delay": 0,
+        "pre_delay": 0,
+        "green_mask": true,
+        "recognition": "TemplateMatch",
+        "roi": [
+            1124,
+            563,
+            142,
+            135
+        ],
+        "template": "自定义战斗/深谣_p2.png"
+    },
+    "检查u1_深谣": {
+        "post_delay": 0,
+        "pre_delay": 0,
+        "green_mask": true,
+        "recognition": "TemplateMatch",
+        "roi": [
+            837,
+            558,
+            163,
+            161
+        ],
+        "template": "自定义战斗/深谣_u1.png"
+    },
+    "检查u2_深谣": {
+        "post_delay": 0,
+        "pre_delay": 0,
+        "green_mask": true,
+        "recognition": "TemplateMatch",
+        "roi": [
+            837,
+            558,
+            163,
+            161
+        ],
+        "template": "自定义战斗/深谣_u2.png"
+    },
+    "检查核心被动1_深谣": {
+        "post_delay": 0,
+        "pre_delay": 0,
+        "green_mask": true,
+        "recognition": "TemplateMatch",
+        "roi": [
+            1155,
+            458,
+            116,
+            101
+        ],
+        "template": "自定义战斗/深谣_核心被动1.png"
+    },
+    "检查核心被动2_深谣": {
+        "post_delay": 0,
+        "pre_delay": 0,
+        "green_mask": true,
+        "recognition": "TemplateMatch",
+        "roi": [
+            1155,
+            458,
+            116,
+            101
+        ],
+        "template": "自定义战斗/深谣_核心被动2.png"
+    },
+    "检查p2动能条_深谣": {
+        "post_delay": 0,
+        "pre_delay": 0,
+        "recognition": "ColorMatch",
+        "roi": [
+            738,
+            618,
+            15,
+            15
+        ],
+        "upper": [
+            191,
+            192,
+            255
+        ],
+        "lower": [
+            184,
+            184,
+            253
+        ]
+    },
+    "检查信号球数量_启明": {
+        "post_delay": 0,
+        "pre_delay": 0,
+        "only_rec": true,
+        "recognition": "OCR",
+        "roi": [
+            1190,
+            555,
+            15,
+            20
+        ],
+        "expected": "^(7|8|9|1[0-6])$"
+    },
+    "识别信号球": {
+        "post_delay": 0,
+        "pre_delay": 0,
+        "green_mask": true,
+        "recognition": "TemplateMatch",
+        "roi": [
+            416,
+            457,
+            848,
+            98
+        ]
+    }
+}
