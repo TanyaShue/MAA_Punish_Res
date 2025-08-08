@@ -12,8 +12,7 @@
         "agent_path": "",
         "agent_params": "",
         "requirements_path": "",
-        "use_venv": true,
-        "pip_index_url": null
+        "use_venv": true
     },
     "resource_tasks": [
         {
